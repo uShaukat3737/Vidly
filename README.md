@@ -229,11 +229,6 @@ ISC License - Feel free to use this project for learning and development
 ## 👨‍💻 Author
 
 **Usman Shaukat** - [GitHub](https://github.com/uShaukat3737)
-httpPOST /api/returns
-x-auth-token: <jwt_token>
-{
-  "customerId": "...",
-  "movieId": "..."
-}
+
 License
 This project is created for educational and portfolio purposes.
