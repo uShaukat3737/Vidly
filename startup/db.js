@@ -4,7 +4,12 @@ const config = require('config');
 
 
 module.exports= function(){
-  mongoose.connect(config.get('db'))
-    .then(() => winston.info(`connected to MongoDB at ${config.get('db')}...`));
+  const db = config.get('db');
+  mongoose.connect(db)
+    .then(() => winston.info(`connected to MongoDB...`))
+    .catch(err => {
+      winston.error(`Failed to connect to MongoDB: ${err.message}`);
+      process.exit(1);
+    });
 
 }
